@@ -1141,7 +1141,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout_38.setObjectName("gridLayout_38")
         self.mac_os = QtWidgets.QLabel(self.groupBox)
         self.mac_os.setObjectName("mac_os")
-        self.mac_os.self.mac_os.setStyleSheet("border: 0px")
+        self.mac_os.setStyleSheet("border: 0px")
         self.gridLayout_38.addWidget(self.mac_os, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_38, 2, 0, 1, 6)
         self.gridLayout_27 = QtWidgets.QGridLayout()
@@ -1515,22 +1515,22 @@ class Ui_Form(QtWidgets.QWidget):
 
     def select_ppt(self, event):
         self.excel_current = "click_no"
-        self.excel.setStyleSheet("background-color: white")
+        self.excel.setStyleSheet("background-color: white; border: 0px")
         self.windows_current = "click_no"
-        self.windows.setStyleSheet("background-color: white")
+        self.windows.setStyleSheet("background-color: white; border: 0px")
         # self.mac_os_current = "click_no"
         # self.mac_os.setStyleSheet("background-color: white")
 
         i = 0
         while True:
-            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
             self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
             if i == 16: break
 
         if self.ppt_current == "click_no":
 
-            self.ppt.setStyleSheet("background-color: '#fe9801'")
+            self.ppt.setStyleSheet("background-color: '#fe9801'; border: 0px")
             self.ppt_current = "click_yes"
             self.active_app.setPixmap(QPixmap(self.active_ppt))
 
@@ -1540,7 +1540,7 @@ class Ui_Form(QtWidgets.QWidget):
             f.write("ppt")
             f.close()
         elif self.ppt_current == "click_yes":
-            self.ppt.setStyleSheet("background-color: white")
+            self.ppt.setStyleSheet("background-color: white; border: 0px")
             self.ppt_current = "click_no"
             self.active_app.clear()
             self.active_app.setText("◀◀ Please select Application")
@@ -1555,22 +1555,22 @@ class Ui_Form(QtWidgets.QWidget):
 
     def select_excel(self, event):
         self.ppt_current = "click_no"
-        self.ppt.setStyleSheet("background-color: white")
+        self.ppt.setStyleSheet("background-color: white; border: 0px")
         self.windows_current = "click_no"
-        self.windows.setStyleSheet("background-color: white")
+        self.windows.setStyleSheet("background-color: white; border: 0px")
         # self.mac_os_current = "click_no"
         # self.mac_os.setStyleSheet("background-color: white")
 
         i = 0
         while True:
-            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
             self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
             if i == 16: break
 
         if self.excel_current == "click_no":
 
-            self.excel.setStyleSheet("background-color: '#fe9801'")
+            self.excel.setStyleSheet("background-color: '#fe9801'; border: 0px")
             self.excel_current = "click_yes"
             self.active_app.setPixmap(QPixmap(self.active_excel))
 
@@ -1580,7 +1580,7 @@ class Ui_Form(QtWidgets.QWidget):
             f.write("excel")
             f.close()
         elif self.excel_current == "click_yes":
-            self.excel.setStyleSheet("background-color: white")
+            self.excel.setStyleSheet("background-color: white; border: 0px")
             self.excel_current = "click_no"
             self.active_app.clear()
             self.active_app.setText("◀◀ Please select Application")
@@ -1595,21 +1595,21 @@ class Ui_Form(QtWidgets.QWidget):
 
     def select_mac_os(self, event):
         self.excel_current = "click_no"
-        self.excel.setStyleSheet("background-color: white")
+        self.excel.setStyleSheet("background-color: white; border: 0px")
         self.windows_current = "click_no"
-        self.windows.setStyleSheet("background-color: white")
+        self.windows.setStyleSheet("background-color: white; border: 0px")
         self.ppt_current = "click_no"
-        self.ppt.setStyleSheet("background-color: white")
+        self.ppt.setStyleSheet("background-color: white; border: 0px")
 
         i = 0
         while True:
-            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
             self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
             if i == 16: break
 
         if self.mac_os_current == "click_no":
-            self.mac_os.setStyleSheet("background-color: '#fe9801'")
+            self.mac_os.setStyleSheet("background-color: '#fe9801'; border: 0px")
             self.mac_os_current = "click_yes"
             self.active_app.setPixmap(QPixmap(self.active_mac_os))
 
@@ -1619,7 +1619,7 @@ class Ui_Form(QtWidgets.QWidget):
             f.write("mac_os")
             f.close()
         elif self.mac_os_current == "click_yes":
-            self.mac_os.setStyleSheet("background-color: white")
+            self.mac_os.setStyleSheet("background-color: white; border: 0px")
             self.mac_os_current = "click_no"
             self.active_app.clear()
             self.active_app.setText("◀◀ Please select Application")
@@ -1635,21 +1635,21 @@ class Ui_Form(QtWidgets.QWidget):
 
     def select_windows(self, event):
         self.excel_current = "click_no"
-        self.excel.setStyleSheet("background-color: white")
+        self.excel.setStyleSheet("background-color: white; border: 0px")
         self.ppt_current = "click_no"
-        self.ppt.setStyleSheet("background-color: white")
+        self.ppt.setStyleSheet("background-color: white; border: 0px")
         # self.mac_os_current = "click_no"
         # self.mac_os.setStyleSheet("background-color: white")
 
         i = 0
         while True:
-            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
             self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
             if i == 16: break
 
         if self.windows_current == "click_no":
-            self.windows.setStyleSheet("background-color: '#fe9801'")
+            self.windows.setStyleSheet("background-color: '#fe9801'; border: 0px")
             self.windows_current = "click_yes"
             self.active_app.setPixmap(QPixmap(self.active_windows))
 
@@ -1659,7 +1659,7 @@ class Ui_Form(QtWidgets.QWidget):
             f.write("windows")
             f.close()
         elif self.windows_current == "click_yes":
-            self.windows.setStyleSheet("background-color: white")
+            self.windows.setStyleSheet("background-color: white; border: 0px")
             self.windows_current = "click_no"
             self.active_app.clear()
             self.active_app.setText("◀◀ Please select Application")
@@ -1678,13 +1678,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 0:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -1705,13 +1705,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 1:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -1732,13 +1732,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 2:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -1803,13 +1803,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 3:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -1874,13 +1874,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 4:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -1901,13 +1901,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 5:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -1928,13 +1928,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 6:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -1955,13 +1955,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 7:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -1982,13 +1982,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 8:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -2009,13 +2009,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 9:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -2036,13 +2036,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 10:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -2063,13 +2063,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 11:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -2090,13 +2090,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 12:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -2117,13 +2117,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 13:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -2144,13 +2144,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 14:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -2171,13 +2171,13 @@ class Ui_Form(QtWidgets.QWidget):
             if i == 15:
                 if list(self.gesture_dic.items())[i][1] == "click_no":
                     list(self.gesture_dic.items())[i][0].setStyleSheet(
-                        "background-color: '#fe9801'; border-radius: 10px;")
+                        "background-color: '#fe9801'; border-radius: 10px; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_yes"
                 elif list(self.gesture_dic.items())[i][1] == "click_yes":
-                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             else:
-                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                 self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
             i = i + 1
 
@@ -2263,7 +2263,7 @@ class Ui_Form(QtWidgets.QWidget):
                     f.close()
 
                     ## 제스처 아이콘 선택 없애는 부분
-                    # list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+                    # list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
                     # self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
                     #
                     # self.touch_des3.clear()
@@ -2307,16 +2307,16 @@ class Ui_Form(QtWidgets.QWidget):
         self.touch_des3.model().item(0).setEnabled(False)
 
         self.ppt_current = "click_no"
-        self.ppt.setStyleSheet("background-color: white")
+        self.ppt.setStyleSheet("background-color: white; border: 0px")
         self.excel_current = "click_no"
-        self.excel.setStyleSheet("background-color: white")
+        self.excel.setStyleSheet("background-color: white; border: 0px")
         self.windows_current = "click_no"
-        self.windows.setStyleSheet("background-color: white")
+        self.windows.setStyleSheet("background-color: white; border: 0px")
         self.mac_os_current = "click_no"
-        self.mac_os.setStyleSheet("background-color: white")
+        self.mac_os.setStyleSheet("background-color: white; border: 0px")
 
         for i in range(0, 16):
-            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white")
+            list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
             self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
 
         f = open("./setting/pero_setting_data/apply_app.txt", "w")
