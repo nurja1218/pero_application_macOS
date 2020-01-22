@@ -1,2 +1,2 @@
-linear3:시작화면 열기(Default)
-linear4:모든창 최소화(Default)
+linear3:대시보드 열기닫기(Default)
+linear4:스포트라이트(Default)

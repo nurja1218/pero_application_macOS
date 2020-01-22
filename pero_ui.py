@@ -67,7 +67,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.gest_func_comment = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoUL00")
-        font.setPointSize(8)
+        font.setPointSize(12)
         self.gest_func_comment.setFont(font)
         self.gest_func_comment.setObjectName("gest_func_comment")
         self.gridLayout_263.addWidget(self.gest_func_comment, 1, 0, 1, 1)
@@ -278,7 +278,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.PERO = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoUL00")
-        font.setPointSize(17)
+        font.setPointSize(25)
         font.setBold(False)
         font.setWeight(50)
         self.PERO.setFont(font)
@@ -295,7 +295,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.applications = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoUL00")
-        font.setPointSize(9)
+        font.setPointSize(17)
         font.setBold(True)
         font.setWeight(75)
         self.applications.setFont(font)
@@ -329,7 +329,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.reset_btn = QtWidgets.QPushButton()
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(9)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         self.reset_btn.setFont(font)
@@ -435,7 +435,7 @@ class Ui_Form(QtWidgets.QWidget):
         # self.gridLayout.addLayout(self.gridLayout_329, 2, 25, 1, 1)
         self.gridGroupBox_80 = QtWidgets.QGroupBox(self.gridLayoutWidget)
         self.gridGroupBox_80.setObjectName("gridGroupBox_80")
-        self.gridGroupBox_80.setStyleSheet("background-color: rgb(255, 255, 255); border-radius: 0px;")
+        self.gridGroupBox_80.setStyleSheet("background-color: rgb(255, 255, 255); border: 0.5px solid rgb(204, 204, 204);")
         self.gridLayout_95 = QtWidgets.QGridLayout(self.gridGroupBox_80)
         self.gridLayout_95.setObjectName("gridLayout_95")
         self.gridLayout_137 = QtWidgets.QGridLayout()
@@ -454,7 +454,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout_139.setObjectName("gridLayout_139")
         self.gridLayout_95.addLayout(self.gridLayout_139, 15, 11, 1, 1)
         self.gridGroupBox_78 = QtWidgets.QGroupBox(self.gridGroupBox_80)
-        self.gridGroupBox_78.setStyleSheet("background-color: rgb(204, 204, 204); border-radius: 10px;")
+        self.gridGroupBox_78.setStyleSheet("background-color: rgb(204, 204, 204); border: 0px;")
         self.gridGroupBox_78.setObjectName("gridGroupBox_78")
         self.gridLayout_173 = QtWidgets.QGridLayout(self.gridGroupBox_78)
         self.gridLayout_173.setObjectName("gridLayout_173")
@@ -468,15 +468,15 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout_174.addLayout(self.gridLayout_176, 6, 0, 1, 1)
         self.gridLayout_185 = QtWidgets.QGridLayout()
         self.gridLayout_185.setObjectName("gridLayout_185")
-        self.commends = QtWidgets.QLabel(self.gridGroupBox_78)
+        self.commands = QtWidgets.QLabel(self.gridGroupBox_78)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(10)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
-        self.commends.setFont(font)
-        self.commends.setObjectName("commends")
-        self.gridLayout_185.addWidget(self.commends, 0, 0, 1, 1)
+        self.commands.setFont(font)
+        self.commands.setObjectName("commands")
+        self.gridLayout_185.addWidget(self.commands, 0, 0, 1, 1)
         self.gridLayout_174.addLayout(self.gridLayout_185, 2, 1, 1, 1)
         self.gridLayout_186 = QtWidgets.QGridLayout()
         self.gridLayout_186.setObjectName("gridLayout_186")
@@ -502,7 +502,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.finger = QtWidgets.QLabel(self.gridGroupBox_78)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(10)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         self.finger.setFont(font)
@@ -528,7 +528,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.video_comment = QtWidgets.QLabel(self.gridGroupBox_78)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(8)
+        font.setPointSize(13)
         self.video_comment.setFont(font)
         self.video_comment.setObjectName("video_comment")
         self.gridLayout_177.addWidget(self.video_comment, 0, 0, 1, 1)
@@ -558,7 +558,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.save_btn = QtWidgets.QPushButton(self.gridGroupBox_78)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(9)
+        font.setPointSize(15)
         font.setBold(True)
         font.setWeight(75)
         self.save_btn.setFont(font)
@@ -578,7 +578,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.fi_com_des = QtWidgets.QLabel(self.gridGroupBox_78)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(8)
+        font.setPointSize(13)
         self.fi_com_des.setFont(font)
         self.fi_com_des.setObjectName("fi_com_des")
         self.gridLayout_189.addWidget(self.fi_com_des, 0, 0, 1, 1)
@@ -634,9 +634,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.finger_touch_des = QtWidgets.QLabel(self.gridGroupBox_80)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(10)
+        font.setPointSize(17)
         self.finger_touch_des.setFont(font)
         self.finger_touch_des.setObjectName("finger_touch_des")
+        self.finger_touch_des.setStyleSheet("border: 0px")
         self.gridLayout_172.addWidget(self.finger_touch_des, 0, 0, 1, 1)
         self.gridLayout_95.addLayout(self.gridLayout_172, 1, 12, 1, 14)
         self.gridLayout_47 = QtWidgets.QGridLayout()
@@ -675,6 +676,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear1 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.linear1.setMaximumSize(QtCore.QSize(55, 55))
         self.linear1.setObjectName("linear1")
+        self.linear1.setStyleSheet("border: 0px")
         self.gridLayout_149.addWidget(self.linear1, 0, 0, 1, 1)
         self.horizontalLayout_2.addLayout(self.gridLayout_149)
         self.gridLayout_147 = QtWidgets.QGridLayout()
@@ -682,6 +684,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear2 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.linear2.setMaximumSize(QtCore.QSize(55, 55))
         self.linear2.setObjectName("linear2")
+        self.linear2.setStyleSheet("border: 0px")
         self.gridLayout_147.addWidget(self.linear2, 0, 0, 1, 1)
         self.horizontalLayout_2.addLayout(self.gridLayout_147)
         self.gridLayout_148 = QtWidgets.QGridLayout()
@@ -689,6 +692,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear3 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.linear3.setMaximumSize(QtCore.QSize(55, 55))
         self.linear3.setObjectName("linear3")
+        self.linear3.setStyleSheet("border: 0px")
         self.gridLayout_148.addWidget(self.linear3, 0, 0, 1, 1)
         self.horizontalLayout_2.addLayout(self.gridLayout_148)
         self.gridLayout_146 = QtWidgets.QGridLayout()
@@ -696,6 +700,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear4 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.linear4.setMaximumSize(QtCore.QSize(55, 55))
         self.linear4.setObjectName("linear4")
+        self.linear4.setStyleSheet("border: 0px")
         self.gridLayout_146.addWidget(self.linear4, 0, 0, 1, 1)
         self.horizontalLayout_2.addLayout(self.gridLayout_146)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
@@ -706,6 +711,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear5 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.linear5.setMaximumSize(QtCore.QSize(55, 55))
         self.linear5.setObjectName("linear5")
+        self.linear5.setStyleSheet("border: 0px")
         self.gridLayout_153.addWidget(self.linear5, 0, 0, 1, 1)
         self.horizontalLayout.addLayout(self.gridLayout_153)
         self.gridLayout_152 = QtWidgets.QGridLayout()
@@ -713,6 +719,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear6 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.linear6.setMaximumSize(QtCore.QSize(55, 55))
         self.linear6.setObjectName("linear6")
+        self.linear6.setStyleSheet("border: 0px")
         self.gridLayout_152.addWidget(self.linear6, 0, 0, 1, 1)
         self.horizontalLayout.addLayout(self.gridLayout_152)
         self.gridLayout_154 = QtWidgets.QGridLayout()
@@ -720,6 +727,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear7 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.linear7.setMaximumSize(QtCore.QSize(55, 55))
         self.linear7.setObjectName("linear7")
+        self.linear7.setStyleSheet("border: 0px")
         self.gridLayout_154.addWidget(self.linear7, 0, 0, 1, 1)
         self.horizontalLayout.addLayout(self.gridLayout_154)
         self.gridLayout_150 = QtWidgets.QGridLayout()
@@ -727,6 +735,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear8 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.linear8.setMaximumSize(QtCore.QSize(55, 55))
         self.linear8.setObjectName("linear8")
+        self.linear8.setStyleSheet("border: 0px")
         self.gridLayout_150.addWidget(self.linear8, 0, 0, 1, 1)
         self.horizontalLayout.addLayout(self.gridLayout_150)
         self.verticalLayout.addLayout(self.horizontalLayout)
@@ -736,9 +745,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve_action = QtWidgets.QLabel(self.gridGroupBox_80)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(10)
+        font.setPointSize(15)
         self.curve_action.setFont(font)
         self.curve_action.setObjectName("curve_action")
+        self.curve_action.setStyleSheet("border: 0px")
         self.gridLayout_144.addWidget(self.curve_action, 0, 0, 1, 1)
         self.gridLayout_95.addLayout(self.gridLayout_144, 8, 0, 1, 11)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
@@ -750,6 +760,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve1 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.curve1.setMaximumSize(QtCore.QSize(55, 55))
         self.curve1.setObjectName("curve1")
+        self.curve1.setStyleSheet("border: 0px")
         self.gridLayout_156.addWidget(self.curve1, 0, 0, 1, 1)
         self.horizontalLayout_4.addLayout(self.gridLayout_156)
         self.gridLayout_158 = QtWidgets.QGridLayout()
@@ -757,6 +768,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve2 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.curve2.setMaximumSize(QtCore.QSize(55, 55))
         self.curve2.setObjectName("curve2")
+        self.curve2.setStyleSheet("border: 0px")
         self.gridLayout_158.addWidget(self.curve2, 0, 0, 1, 1)
         self.horizontalLayout_4.addLayout(self.gridLayout_158)
         self.gridLayout_157 = QtWidgets.QGridLayout()
@@ -764,6 +776,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve3 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.curve3.setMaximumSize(QtCore.QSize(55, 55))
         self.curve3.setObjectName("curve3")
+        self.curve3.setStyleSheet("border: 0px")
         self.gridLayout_157.addWidget(self.curve3, 0, 0, 1, 1)
         self.horizontalLayout_4.addLayout(self.gridLayout_157)
         self.gridLayout_155 = QtWidgets.QGridLayout()
@@ -771,6 +784,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve4 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.curve4.setMaximumSize(QtCore.QSize(55, 55))
         self.curve4.setObjectName("curve4")
+        self.curve4.setStyleSheet("border: 0px")
         self.gridLayout_155.addWidget(self.curve4, 0, 0, 1, 1)
         self.horizontalLayout_4.addLayout(self.gridLayout_155)
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
@@ -781,6 +795,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve5 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.curve5.setMaximumSize(QtCore.QSize(55, 55))
         self.curve5.setObjectName("curve5")
+        self.curve5.setStyleSheet("border: 0px")
         self.gridLayout_160.addWidget(self.curve5, 0, 0, 1, 1)
         self.horizontalLayout_3.addLayout(self.gridLayout_160)
         self.gridLayout_161 = QtWidgets.QGridLayout()
@@ -788,6 +803,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve6 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.curve6.setMaximumSize(QtCore.QSize(55, 55))
         self.curve6.setObjectName("curve6")
+        self.curve6.setStyleSheet("border: 0px")
         self.gridLayout_161.addWidget(self.curve6, 0, 0, 1, 1)
         self.horizontalLayout_3.addLayout(self.gridLayout_161)
         self.gridLayout_162 = QtWidgets.QGridLayout()
@@ -795,6 +811,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve7 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.curve7.setMaximumSize(QtCore.QSize(55, 55))
         self.curve7.setObjectName("curve7")
+        self.curve7.setStyleSheet("border: 0px")
         self.gridLayout_162.addWidget(self.curve7, 0, 0, 1, 1)
         self.horizontalLayout_3.addLayout(self.gridLayout_162)
         self.gridLayout_159 = QtWidgets.QGridLayout()
@@ -802,6 +819,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.curve8 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.curve8.setMaximumSize(QtCore.QSize(55, 55))
         self.curve8.setObjectName("curve8")
+        self.curve8.setStyleSheet("border: 0px")
         self.gridLayout_159.addWidget(self.curve8, 0, 0, 1, 1)
         self.horizontalLayout_3.addLayout(self.gridLayout_159)
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
@@ -811,9 +829,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.linear_action = QtWidgets.QLabel(self.gridGroupBox_80)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(10)
+        font.setPointSize(15)
         self.linear_action.setFont(font)
         self.linear_action.setObjectName("linear_action")
+        self.linear_action.setStyleSheet("border: 0px")
         self.gridLayout_143.addWidget(self.linear_action, 0, 0, 1, 1)
         self.gridLayout_95.addLayout(self.gridLayout_143, 3, 0, 1, 11)
         self.gridLayout_4 = QtWidgets.QGridLayout()
@@ -839,9 +858,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap_action = QtWidgets.QLabel(self.gridGroupBox_80)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(10)
+        font.setPointSize(15)
         self.overlap_action.setFont(font)
         self.overlap_action.setObjectName("overlap_action")
+        self.overlap_action.setStyleSheet("border: 0px")
         self.gridLayout_145.addWidget(self.overlap_action, 0, 0, 1, 1)
         self.gridLayout_95.addLayout(self.gridLayout_145, 13, 0, 1, 11)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
@@ -853,6 +873,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap1 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.overlap1.setMaximumSize(QtCore.QSize(55, 55))
         self.overlap1.setObjectName("overlap1")
+        self.overlap1.setStyleSheet("border: 0px")
         self.gridLayout_166.addWidget(self.overlap1, 0, 0, 1, 1)
         self.horizontalLayout_6.addLayout(self.gridLayout_166)
         self.gridLayout_164 = QtWidgets.QGridLayout()
@@ -860,6 +881,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap2 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.overlap2.setMaximumSize(QtCore.QSize(55, 55))
         self.overlap2.setObjectName("overlap2")
+        self.overlap2.setStyleSheet("border: 0px")
         self.gridLayout_164.addWidget(self.overlap2, 0, 0, 1, 1)
         self.horizontalLayout_6.addLayout(self.gridLayout_164)
         self.gridLayout_167 = QtWidgets.QGridLayout()
@@ -867,6 +889,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap3 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.overlap3.setMaximumSize(QtCore.QSize(55, 55))
         self.overlap3.setObjectName("overlap3")
+        self.overlap3.setStyleSheet("border: 0px")
         self.gridLayout_167.addWidget(self.overlap3, 0, 0, 1, 1)
         self.horizontalLayout_6.addLayout(self.gridLayout_167)
         self.gridLayout_163 = QtWidgets.QGridLayout()
@@ -874,6 +897,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap4 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.overlap4.setMaximumSize(QtCore.QSize(55, 55))
         self.overlap4.setObjectName("overlap4")
+        self.overlap4.setStyleSheet("border: 0px")
         self.gridLayout_163.addWidget(self.overlap4, 0, 0, 1, 1)
         self.horizontalLayout_6.addLayout(self.gridLayout_163)
         self.verticalLayout_3.addLayout(self.horizontalLayout_6)
@@ -884,6 +908,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap5 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.overlap5.setMaximumSize(QtCore.QSize(55, 55))
         self.overlap5.setObjectName("overlap5")
+        self.overlap5.setStyleSheet("border: 0px")
         self.gridLayout_171.addWidget(self.overlap5, 0, 0, 1, 1)
         self.horizontalLayout_5.addLayout(self.gridLayout_171)
         self.gridLayout_169 = QtWidgets.QGridLayout()
@@ -891,6 +916,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap6 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.overlap6.setMaximumSize(QtCore.QSize(55, 55))
         self.overlap6.setObjectName("overlap6")
+        self.overlap6.setStyleSheet("border: 0px")
         self.gridLayout_169.addWidget(self.overlap6, 0, 0, 1, 1)
         self.horizontalLayout_5.addLayout(self.gridLayout_169)
         self.gridLayout_170 = QtWidgets.QGridLayout()
@@ -898,6 +924,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap7 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.overlap7.setMaximumSize(QtCore.QSize(55, 55))
         self.overlap7.setObjectName("overlap7")
+        self.overlap7.setStyleSheet("border: 0px")
         self.gridLayout_170.addWidget(self.overlap7, 0, 0, 1, 1)
         self.horizontalLayout_5.addLayout(self.gridLayout_170)
         self.gridLayout_168 = QtWidgets.QGridLayout()
@@ -905,6 +932,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.overlap8 = QtWidgets.QLabel(self.gridGroupBox_80)
         self.overlap8.setMaximumSize(QtCore.QSize(55, 55))
         self.overlap8.setObjectName("overlap8")
+        self.overlap8.setStyleSheet("border: 0px")
         self.gridLayout_168.addWidget(self.overlap8, 0, 0, 1, 1)
         self.horizontalLayout_5.addLayout(self.gridLayout_168)
         self.verticalLayout_3.addLayout(self.horizontalLayout_5)
@@ -980,9 +1008,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.active_app = QtWidgets.QLabel(self.gridGroupBox_80)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(11)
+        font.setPointSize(17)
         self.active_app.setFont(font)
         self.active_app.setObjectName("active_app")
+        self.active_app.setStyleSheet("border: 0px")
         self.active_app.setAlignment(QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
         self.active_app.setFixedWidth(350)
         self.gridLayout_141.addWidget(self.active_app, 0, 0, 1, 1)
@@ -992,8 +1021,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.movement = QtWidgets.QLabel(self.gridGroupBox_80)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
+        font.setPointSize(17)
         self.movement.setFont(font)
         self.movement.setObjectName("movement")
+        self.movement.setStyleSheet("border: 0px")
         self.gridLayout_142.addWidget(self.movement, 0, 0, 1, 1)
         self.gridLayout_95.addLayout(self.gridLayout_142, 1, 0, 1, 11)
         self.gridLayout.addWidget(self.gridGroupBox_80, 3, 7, 23, 19)
@@ -1006,7 +1037,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.user_set = QtWidgets.QLabel(self.gridLayoutWidget)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoM00")
-        font.setPointSize(17)
+        font.setPointSize(25)
         font.setBold(True)
         font.setWeight(75)
         self.user_set.setFont(font)
@@ -1015,7 +1046,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout.addLayout(self.gridLayout_40, 0, 2, 2, 4)
         self.groupBox = QtWidgets.QGroupBox(self.gridLayoutWidget)
         self.groupBox.setObjectName("groupBox")
-        self.groupBox.setStyleSheet("background-color: rgb(255, 255, 255); border-radius: 0px;")
+        self.groupBox.setStyleSheet("background-color: rgb(255, 255, 255); border: 0.5px solid rgb(204, 204, 204);")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.groupBox)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.gridLayout_34 = QtWidgets.QGridLayout()
@@ -1026,6 +1057,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.label = QtWidgets.QLabel(self.groupBox)
         self.label.setText("")
         self.label.setObjectName("label")
+        self.label.setStyleSheet("border: 0px")
         self.gridLayout_55.addWidget(self.label, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_55, 6, 0, 1, 1)
         self.gridLayout_46 = QtWidgets.QGridLayout()
@@ -1038,6 +1070,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout_35.setObjectName("gridLayout_35")
         self.windows = QtWidgets.QLabel(self.groupBox)
         self.windows.setObjectName("windows")
+        self.windows.setStyleSheet("border: 0px")
         self.gridLayout_35.addWidget(self.windows, 0, 0, 3, 1)
         self.gridLayout_3.addLayout(self.gridLayout_35, 3, 0, 1, 6)
         self.gridLayout_56 = QtWidgets.QGridLayout()
@@ -1045,6 +1078,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.label_2 = QtWidgets.QLabel(self.groupBox)
         self.label_2.setText("")
         self.label_2.setObjectName("label_2")
+        self.label_2.setStyleSheet("border: 0px")
         self.gridLayout_56.addWidget(self.label_2, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_56, 7, 0, 1, 1)
         self.gridLayout_31 = QtWidgets.QGridLayout()
@@ -1058,6 +1092,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.label_3 = QtWidgets.QLabel(self.groupBox)
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
+        self.label_3.setStyleSheet("border: 0px")
         self.gridLayout_57.addWidget(self.label_3, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_57, 8, 0, 1, 1)
         self.gridLayout_67 = QtWidgets.QGridLayout()
@@ -1106,6 +1141,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout_38.setObjectName("gridLayout_38")
         self.mac_os = QtWidgets.QLabel(self.groupBox)
         self.mac_os.setObjectName("mac_os")
+        self.mac_os.self.mac_os.setStyleSheet("border: 0px")
         self.gridLayout_38.addWidget(self.mac_os, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_38, 2, 0, 1, 6)
         self.gridLayout_27 = QtWidgets.QGridLayout()
@@ -1113,6 +1149,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.label_4 = QtWidgets.QLabel(self.groupBox)
         self.label_4.setText("")
         self.label_4.setObjectName("label_4")
+        self.label_4.setStyleSheet("border: 0px")
         self.gridLayout_27.addWidget(self.label_4, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_27, 9, 0, 1, 1)
         self.gridLayout_41 = QtWidgets.QGridLayout()
@@ -1122,6 +1159,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout_39.setObjectName("gridLayout_39")
         self.excel = QtWidgets.QLabel(self.groupBox)
         self.excel.setObjectName("excel")
+        self.excel.setStyleSheet("border: 0px")
         self.gridLayout_39.addWidget(self.excel, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_39, 1, 0, 1, 6)
         self.gridLayout_59 = QtWidgets.QGridLayout()
@@ -1132,12 +1170,14 @@ class Ui_Form(QtWidgets.QWidget):
         self.label_5 = QtWidgets.QLabel(self.groupBox)
         self.label_5.setText("")
         self.label_5.setObjectName("label_5")
+        self.label_5.setStyleSheet("border: 0px")
         self.gridLayout_6.addWidget(self.label_5, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_6, 10, 0, 1, 1)
         self.gridLayout_7 = QtWidgets.QGridLayout()
         self.gridLayout_7.setObjectName("gridLayout_7")
         self.ppt = QtWidgets.QLabel(self.groupBox)
         self.ppt.setObjectName("ppt")
+        self.ppt.setStyleSheet("border: 0px")
         self.gridLayout_7.addWidget(self.ppt, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_7, 0, 0, 1, 6)
         self.gridLayout_29 = QtWidgets.QGridLayout()
@@ -1162,9 +1202,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.notice2 = QtWidgets.QLabel(self.groupBox)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoUL00")
-        font.setPointSize(8)
+        font.setPointSize(12)
         self.notice2.setFont(font)
         self.notice2.setObjectName("notice2")
+        self.notice2.setStyleSheet("border: 0px")
         self.gridLayout_62.addWidget(self.notice2, 0, 0, 1, 1)
         self.gridLayout_43.addLayout(self.gridLayout_62, 1, 0, 1, 1)
         self.gridLayout_61 = QtWidgets.QGridLayout()
@@ -1172,9 +1213,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.notice3 = QtWidgets.QLabel(self.groupBox)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoUL00")
-        font.setPointSize(8)
+        font.setPointSize(12)
         self.notice3.setFont(font)
         self.notice3.setObjectName("notice3")
+        self.notice3.setStyleSheet("border: 0px")
         self.gridLayout_61.addWidget(self.notice3, 0, 0, 1, 1)
         self.gridLayout_43.addLayout(self.gridLayout_61, 2, 0, 1, 1)
         self.gridLayout_60 = QtWidgets.QGridLayout()
@@ -1182,9 +1224,10 @@ class Ui_Form(QtWidgets.QWidget):
         self.notice1 = QtWidgets.QLabel(self.groupBox)
         font = QtGui.QFont()
         font.setFamily("AppleSDGothicNeoUL00")
-        font.setPointSize(8)
+        font.setPointSize(12)
         self.notice1.setFont(font)
         self.notice1.setObjectName("notice1")
+        self.notice1.setStyleSheet("border: 0px")
         self.gridLayout_60.addWidget(self.notice1, 0, 0, 1, 1)
         self.gridLayout_43.addLayout(self.gridLayout_60, 0, 0, 1, 1)
         self.gridLayout_3.addLayout(self.gridLayout_43, 4, 0, 2, 6)
@@ -1215,7 +1258,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.applications.setText(_translate("Form", "Applications"))
 
         palm_logo = QPixmap("./mainFrame/palmcat_logo.png")
-        palm_logo = palm_logo.scaled(145, 43)
+        palm_logo = palm_logo.scaled(144, 43)
         self.palmcat_logo.setText(_translate("Form", "팜켓"))
         self.palmcat_logo.setPixmap(QPixmap(palm_logo))
 
@@ -1223,7 +1266,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.touch4.setText(_translate("Form", "터치4개"))
         self.touch4.setPixmap(QPixmap(touch_4))
 
-        self.commends.setText(_translate("Form", "Commends"))
+        self.commands.setText(_translate("Form", "Commands"))
 
         touch_3 = QPixmap("./setting/move_video/touch_3.png")
         self.touch3.setText(_translate("Form", "터치3개"))
@@ -1413,6 +1456,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.windows.setPixmap(QPixmap(windows_tag))
         self.windows.mousePressEvent = self.select_windows
         self.windows_current = "click_no"
+        self.windows.setDisabled(True)
 
         mac_img = QPixmap("./mainFrame/macOS.png")
         mac_tag = mac_img.scaled(161, 37)
@@ -1420,7 +1464,6 @@ class Ui_Form(QtWidgets.QWidget):
         self.mac_os.setPixmap(QPixmap(mac_tag))
         self.mac_os.mousePressEvent = self.select_mac_os
         self.mac_os_current = "click_no"
-        self.mac_os.setDisabled(True)
 
         excel_img = QPixmap("./mainFrame/excel.png")
         excel_tag = excel_img.scaled(85, 37)
@@ -1428,6 +1471,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.excel.setPixmap(QPixmap(excel_tag))
         self.excel.mousePressEvent = self.select_excel
         self.excel_current = "click_no"
+        self.excel.setDisabled(True)
 
         ppt_img = QPixmap("./mainFrame/ppt.png")
         ppt_tag = ppt_img.scaled(141, 37)
@@ -1435,6 +1479,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.ppt.setPixmap(QPixmap(ppt_tag))
         self.ppt.mousePressEvent = self.select_ppt
         self.ppt_current = "click_no"
+        self.ppt.setDisabled(True)
 
         self.active_ppt = QPixmap("./mainFrame/active_ppt.png")
         self.active_ppt = self.active_ppt.scaled(127, 24)
@@ -1587,6 +1632,7 @@ class Ui_Form(QtWidgets.QWidget):
             f.write("default")
             f.close()
 
+
     def select_windows(self, event):
         self.excel_current = "click_no"
         self.excel.setStyleSheet("background-color: white")
@@ -1704,48 +1750,48 @@ class Ui_Form(QtWidgets.QWidget):
         f.close()
         option = {}
 
-        if current_app == "windows":
-            f = open("./setting/pero_setting_data/option_windows.txt", "rt", encoding="UTF-8")
+        if current_app == "mac_os":
+            f = open("./setting/pero_setting_data/option_macos.txt", "rt", encoding="UTF-8")
             current_option = f.read()
             f.close()
 
             current_option = current_option.split("\n")
             for i in range(len(current_option)):
                 option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
-        elif current_app == "excel":
-            f = open("./setting/pero_setting_data/option_excel.txt", "rt", encoding="UTF-8")
-            current_option = f.read()
-            f.close()
-
-            current_option = current_option.split("\n")
-            for i in range(len(current_option)):
-                option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
-        elif current_app == "ppt":
-            f = open("./setting/pero_setting_data/option_ppt.txt", "rt", encoding="UTF-8")
-            current_option = f.read()
-            f.close()
-
-            current_option = current_option.split("\n")
-            for i in range(len(current_option)):
-                option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
+        # elif current_app == "excel":
+        #     f = open("./setting/pero_setting_data/option_excel.txt", "rt", encoding="UTF-8")
+        #     current_option = f.read()
+        #     f.close()
+        #
+        #     current_option = current_option.split("\n")
+        #     for i in range(len(current_option)):
+        #         option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
+        # elif current_app == "ppt":
+        #     f = open("./setting/pero_setting_data/option_ppt.txt", "rt", encoding="UTF-8")
+        #     current_option = f.read()
+        #     f.close()
+        #
+        #     current_option = current_option.split("\n")
+        #     for i in range(len(current_option)):
+        #         option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
 
         self.touch_des3.clear()
         self.touch_des3.addItem("---명령선택---")
         self.touch_des3.model().item(0).setEnabled(False)
 
         if list(self.gesture_dic.items())[2][1] == "click_yes":
-            if current_app == "windows":
+            if current_app == "mac_os":
                 set_combo = option['linear3'].split("/")
                 for i in range(len(set_combo)):
                     self.touch_des3.addItem(set_combo[i])
-            elif current_app == "excel":
-                set_combo = option['linear3'].split("/")
-                for i in range(len(set_combo)):
-                    self.touch_des3.addItem(set_combo[i])
-            elif current_app == "ppt":
-                set_combo = option['linear3'].split("/")
-                for i in range(len(set_combo)):
-                    self.touch_des3.addItem(set_combo[i])
+            # elif current_app == "excel":
+            #     set_combo = option['linear3'].split("/")
+            #     for i in range(len(set_combo)):
+            #         self.touch_des3.addItem(set_combo[i])
+            # elif current_app == "ppt":
+            #     set_combo = option['linear3'].split("/")
+            #     for i in range(len(set_combo)):
+            #         self.touch_des3.addItem(set_combo[i])
 
         movie = QMovie("./setting/move_video/linear3.gif")
         self.video.setMovie(movie)
@@ -1775,48 +1821,48 @@ class Ui_Form(QtWidgets.QWidget):
         f.close()
         option = {}
 
-        if current_app == "windows":
-            f = open("./setting/pero_setting_data/option_windows.txt", "rt", encoding="UTF-8")
+        if current_app == "mac_os":
+            f = open("./setting/pero_setting_data/option_macos.txt", "rt", encoding="UTF-8")
             current_option = f.read()
             f.close()
 
             current_option = current_option.split("\n")
             for i in range(len(current_option)):
                 option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
-        elif current_app == "excel":
-            f = open("./setting/pero_setting_data/option_excel.txt", "rt", encoding="UTF-8")
-            current_option = f.read()
-            f.close()
-
-            current_option = current_option.split("\n")
-            for i in range(len(current_option)):
-                option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
-        elif current_app == "ppt":
-            f = open("./setting/pero_setting_data/option_ppt.txt", "rt", encoding="UTF-8")
-            current_option = f.read()
-            f.close()
-
-            current_option = current_option.split("\n")
-            for i in range(len(current_option)):
-                option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
+        # elif current_app == "excel":
+        #     f = open("./setting/pero_setting_data/option_excel.txt", "rt", encoding="UTF-8")
+        #     current_option = f.read()
+        #     f.close()
+        #
+        #     current_option = current_option.split("\n")
+        #     for i in range(len(current_option)):
+        #         option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
+        # elif current_app == "ppt":
+        #     f = open("./setting/pero_setting_data/option_ppt.txt", "rt", encoding="UTF-8")
+        #     current_option = f.read()
+        #     f.close()
+        #
+        #     current_option = current_option.split("\n")
+        #     for i in range(len(current_option)):
+        #         option.update({current_option[i].split(":")[0]: current_option[i].split(":")[1]})
 
         self.touch_des3.clear()
         self.touch_des3.addItem("---명령선택---")
         self.touch_des3.model().item(0).setEnabled(False)
 
         if list(self.gesture_dic.items())[3][1] == "click_yes":
-            if current_app == "windows":
+            if current_app == "mac_os":
                 set_combo = option['linear4'].split("/")
                 for i in range(len(set_combo)):
                     self.touch_des3.addItem(set_combo[i])
-            elif current_app == "excel":
-                set_combo = option['linear4'].split("/")
-                for i in range(len(set_combo)):
-                    self.touch_des3.addItem(set_combo[i])
-            elif current_app == "ppt":
-                set_combo = option['linear4'].split("/")
-                for i in range(len(set_combo)):
-                    self.touch_des3.addItem(set_combo[i])
+            # elif current_app == "excel":
+            #     set_combo = option['linear4'].split("/")
+            #     for i in range(len(set_combo)):
+            #         self.touch_des3.addItem(set_combo[i])
+            # elif current_app == "ppt":
+            #     set_combo = option['linear4'].split("/")
+            #     for i in range(len(set_combo)):
+            #         self.touch_des3.addItem(set_combo[i])
 
         movie = QMovie("./setting/move_video/linear4.gif")
         self.video.setMovie(movie)

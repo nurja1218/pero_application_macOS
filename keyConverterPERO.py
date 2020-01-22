@@ -109,70 +109,76 @@ def function_wizard():
 
 
 #########################################
-########### windows default #############
+############# macOS default #############
 
-def windows_start():
+def mac_dashboard():
     currentValue.clear()
 
-    keyAction.press(keyboard.Key.ctrl)
-    keyAction.press(keyboard.Key.esc)
-    keyAction.release(keyboard.Key.esc)
-    keyAction.release(keyboard.Key.ctrl)
+    keyAction.press(keyboard.Key.alt)
+    keyAction.press(keyboard.Key.cmd)
+    keyAction.press('d')
+    keyAction.release('d')
+    keyAction.release(keyboard.Key.cmd)
+    keyAction.release(keyboard.Key.alt)
 
 
-def windows_process():
+def desktop_left():
+    currentValue.clear()
+
+    keyAction.press(keyboard.Key.ctrl_l)
+    keyAction.press(keyboard.Key.left)
+    keyAction.release(keyboard.Key.left)
+    keyAction.release(keyboard.Key.ctrl_l)
+
+
+def help_menu():
+    currentValue.clear()
+
+    keyAction.press(keyboard.Key.shift)
+    keyAction.press(keyboard.Key.cmd)
+    keyAction.press('/')
+    keyAction.release('/')
+    keyAction.release(keyboard.Key.cmd)
+    keyAction.release(keyboard.Key.shift)
+
+
+def spotlight():
     currentValue.clear()
 
     keyAction.press(keyboard.Key.cmd)
-    keyAction.press(keyboard.Key.tab)
-    keyAction.release(keyboard.Key.tab)
+    keyAction.press(keyboard.Key.space)
+    keyAction.release(keyboard.Key.space)
     keyAction.release(keyboard.Key.cmd)
 
 
-def windows_search():
+def desktop_right():
     currentValue.clear()
 
-    keyAction.press(keyboard.Key.cmd)
-    keyAction.press('s')
-    keyAction.release('s')
-    keyAction.release(keyboard.Key.cmd)
+    keyAction.press(keyboard.Key.ctrl_l)
+    keyAction.press(keyboard.Key.right)
+    keyAction.release(keyboard.Key.right)
+    keyAction.release(keyboard.Key.ctrl_l)
 
 
-def windows_minimize():
+def full_screen_capture():
     currentValue.clear()
 
+    keyAction.press(keyboard.Key.shift)
     keyAction.press(keyboard.Key.cmd)
-    keyAction.press('m')
-    keyAction.release('m')
+    keyAction.press('3')
+    keyAction.release('3')
     keyAction.release(keyboard.Key.cmd)
-
-
-def windows_zoom():
-    currentValue.clear()
-
-    keyAction.press(keyboard.Key.cmd)
-    keyAction.press('=')
-    keyAction.release('=')
-    keyAction.release(keyboard.Key.cmd)
-
-
-def windows_explorer():
-    currentValue.clear()
-
-    keyAction.press(keyboard.Key.cmd)
-    keyAction.press('e')
-    keyAction.release('e')
-    keyAction.release(keyboard.Key.cmd)
+    keyAction.release(keyboard.Key.shift)
 
 
 #########################################
 
-func_mapping = {"windows_start": windows_start,
-                "windows_process": windows_process,
-                "windows_search": windows_search,
-                "windows_minimize": windows_minimize,
-                "windows_zoom": windows_zoom,
-                "windows_explorer": windows_explorer,
+func_mapping = {"mac_dashboard": mac_dashboard,
+                "desktop_left": desktop_left,
+                "help_menu": help_menu,
+                "spotlight": spotlight,
+                "desktop_right": desktop_right,
+                "full_screen_capture": full_screen_capture,
                 "presentation_start": presentation_start,
                 "presentation_create": presentation_create,
                 "slide_add": slide_add,
@@ -225,7 +231,7 @@ def execute3():
 
         for item in list(default_all.keys()):
             if item == "linear3":
-                func_mapping["windows_start"]()
+                func_mapping["mac_dashboard"]()
     # elif apply_app == "excel":
     #     ## funWin(): 현재 활성화된 어플리케이션 이름을 반환
     #     # if funWin() == "EXCEL.EXE":
@@ -259,19 +265,19 @@ def execute3():
     #                     func_mapping["presentation_create"]()
     #                 elif linear3 == "새 슬라이드 추가":
     #                     func_mapping["slide_add"]()
-    elif apply_app == "windows":
+    elif apply_app == "mac_os":
         for i in range(len(apply_ges) - 1):
             if apply_ges[i] == "linear3":
                 # 명령값에 대한 함수 실행
                 f = open("./setting/pero_setting_data/linear3.txt", "r")
                 linear3 = f.read()
                 linear3 = linear3.split(":")[1]
-                if linear3 == "시작화면 열기(Default)":
-                    func_mapping["windows_start"]()
-                elif linear3 == "윈도우 작업 보기":
-                    func_mapping["windows_process"]()
-                elif linear3 == "윈도우 검색 창 실행":
-                    func_mapping["windows_search"]()
+                if linear3 == "대시보드 열기(Default)":
+                    func_mapping["mac_dashboard"]()
+                elif linear3 == "화면 왼쪽 이동":
+                    func_mapping["desktop_left"]()
+                elif linear3 == "도움말 메뉴":
+                    func_mapping["help_menu"]()
 
 
 def execute4():
@@ -292,7 +298,7 @@ def execute4():
 
         for item in list(default_all.keys()):
             if item == "linear4":
-                func_mapping["windows_minimize"]()
+                func_mapping["spotlight"]()
     # elif apply_app == "excel":
     #     # if funWin() == "EXCEL.EXE":
     #         for i in range(len(apply_ges) - 1):
@@ -319,18 +325,18 @@ def execute4():
     #                     func_mapping["file_home"]()
     #                 elif linear4 == "파일열기":
     #                     func_mapping["open_file"]()
-    elif apply_app == "windows":
+    elif apply_app == "mac_os":
         for i in range(len(apply_ges) - 1):
             if apply_ges[i] == "linear4":
                 f = open("./setting/pero_setting_data/linear4.txt", "r")
                 linear4 = f.read()
                 linear4 = linear4.split(":")[1]
-                if linear4 == "모든창 최소화(Default)":
-                    func_mapping["windows_minimize"]()
-                elif linear4 == "돋보기 실행":
-                    func_mapping["windows_zoom"]()
-                elif linear4 == "탐색기 실행":
-                    func_mapping["windows_explorer"]()
+                if linear4 == "스포트라이(Default)":
+                    func_mapping["spotlight"]()
+                elif linear4 == "화면 오른쪽 이동":
+                    func_mapping["desktop_right"]()
+                elif linear4 == "전체화면 캡처":
+                    func_mapping["full_screen_capture"]()
 
 
 # 키보드 클릭시(press) 아래 함수 실행
