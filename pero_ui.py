@@ -2,19 +2,19 @@ import sys
 import subprocess
 import os
 
-# import psutil
+import psutil
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSignal, QObject
 from PyQt5.QtGui import QPixmap, QIcon, QMovie
 
 
 # background process kill(keyConverter and pero_ui)
-# def kill_process():
-#     for proc in psutil.process_iter():
-#         if any(procstr in proc.name() for procstr in
-#                ['keyConverterPERO.exe', 'keyConverterPERO.exe', 'keyConverterPERO.exe', 'keyConverterPERO.exe']):
-#             print(f'Killing {proc.name()}')
-#             proc.kill()
+def kill_process():
+    for proc in psutil.process_iter():
+        if any(procstr in proc.name() for procstr in
+               ['python', 'python.exe', 'python3.7']):
+            print(f'Killing {proc.name()}')
+            proc.kill()
 
 
 subprocess_list = []
@@ -32,14 +32,6 @@ class Ui_Form(QtWidgets.QWidget):
         self.setupUi(Form)
 
     def setupUi(self, Form):
-        # Form.setObjectName("Form")
-        # Form.setEnabled(True)
-        # Form.resize(1330, 810)
-        # Form.setFixedSize(1330, 810)
-        # Form.setFocusPolicy(QtCore.Qt.NoFocus)
-        # Form.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
-        # Form.setWindowOpacity(3.0)
-        # Form.setStyleSheet("background-color: rgb(255, 255, 255)")
 
         self.setObjectName("Form")
         self.setEnabled(True)
@@ -1242,7 +1234,7 @@ class Ui_Form(QtWidgets.QWidget):
 
     def retranslateUi(self, Form):
 
-        # subprocess_list.append(subprocess.Popen('keyConverterPERO.exe', shell=True))
+        # subprocess_list.append(subprocess.Popen('python keyConverterPERO.py', shell=True))
 
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("Palmcat", "Palmcat"))
@@ -2346,7 +2338,7 @@ class Ui_Form(QtWidgets.QWidget):
             f.write("default")
             f.close()
 
-            # kill_process()
+            kill_process()
 
             event.accept()
         else:

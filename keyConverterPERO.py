@@ -154,6 +154,7 @@ def spotlight():
 def desktop_right():
     currentValue.clear()
 
+
     keyAction.press(keyboard.Key.ctrl_l)
     keyAction.press(keyboard.Key.right)
     keyAction.release(keyboard.Key.right)
@@ -232,39 +233,6 @@ def execute3():
         for item in list(default_all.keys()):
             if item == "linear3":
                 func_mapping["mac_dashboard"]()
-    # elif apply_app == "excel":
-    #     ## funWin(): 현재 활성화된 어플리케이션 이름을 반환
-    #     # if funWin() == "EXCEL.EXE":
-    #         ## 1. 사용할 제스처가 어떤 것인
-    #     # 지 파악
-    #         ## 2. 각 제스처 이름의 text파일을 읽어오기
-    #         ## 3. 읽은 text파일의 명령에 따라 각 함수에 연결
-    #         for i in range(len(apply_ges) - 1):
-    #             if apply_ges[i] == "linear3":
-    #                 # 명령값에 대한 함수 실행
-    #                 f = open("./setting/pero_setting_data/linear3.txt", "r")
-    #                 linear3 = f.read()
-    #                 linear3 = linear3.split(":")[1]
-    #                 if linear3 == "다른 이름으로 저장":
-    #                     func_mapping["save_as"]()
-    #                 elif linear3 == "파일(홈)":
-    #                     func_mapping["file_home"]()
-    #                 elif linear3 == "셀서식":
-    #                     func_mapping["format_cell"]()
-    # elif apply_app == "ppt":
-    #     # if funWin() == "POWERPNT.EXE":
-    #         for i in range(len(apply_ges) - 1):
-    #             if apply_ges[i] == "linear3":
-    #                 # 명령값에 대한 함수 실행
-    #                 f = open("./setting/pero_setting_data/linear3.txt", "r")
-    #                 linear3 = f.read()
-    #                 linear3 = linear3.split(":")[1]
-    #                 if linear3 == "프레젠테이션 시작":
-    #                     func_mapping["presentation_start"]()
-    #                 elif linear3 == "새 프레젠테이션 생성":
-    #                     func_mapping["presentation_create"]()
-    #                 elif linear3 == "새 슬라이드 추가":
-    #                     func_mapping["slide_add"]()
     elif apply_app == "mac_os":
         for i in range(len(apply_ges) - 1):
             if apply_ges[i] == "linear3":
@@ -272,7 +240,7 @@ def execute3():
                 f = open("./setting/pero_setting_data/linear3.txt", "r")
                 linear3 = f.read()
                 linear3 = linear3.split(":")[1]
-                if linear3 == "대시보드 열기(Default)":
+                if linear3 == "대시보드 열기닫기(Default)":
                     func_mapping["mac_dashboard"]()
                 elif linear3 == "화면 왼쪽 이동":
                     func_mapping["desktop_left"]()
@@ -299,39 +267,13 @@ def execute4():
         for item in list(default_all.keys()):
             if item == "linear4":
                 func_mapping["spotlight"]()
-    # elif apply_app == "excel":
-    #     # if funWin() == "EXCEL.EXE":
-    #         for i in range(len(apply_ges) - 1):
-    #             if apply_ges[i] == "linear4":
-    #                 f = open("./setting/pero_setting_data/linear4.txt", "r")
-    #                 linear4 = f.read()
-    #                 linear4 = linear4.split(":")[1]
-    #                 if linear4 == "열길이 0":
-    #                     func_mapping["column_zero"]()
-    #                 elif linear4 == "행길이 0":
-    #                     func_mapping["row_zero"]()
-    #                 elif linear4 == "함수 마법사":
-    #                     func_mapping["function_wizard"]()
-    # elif apply_app == "ppt":
-    #     # if funWin() == "POWERPNT.EXE":
-    #         for i in range(len(apply_ges) - 1):
-    #             if apply_ges[i] == "linear4":
-    #                 f = open("./setting/pero_setting_data/linear4.txt", "r")
-    #                 linear4 = f.read()
-    #                 linear4 = linear4.split(":")[1]
-    #                 if linear4 == "다른 이름으로 저장":
-    #                     func_mapping["save_as"]()
-    #                 elif linear4 == "파일(홈)":
-    #                     func_mapping["file_home"]()
-    #                 elif linear4 == "파일열기":
-    #                     func_mapping["open_file"]()
     elif apply_app == "mac_os":
         for i in range(len(apply_ges) - 1):
             if apply_ges[i] == "linear4":
                 f = open("./setting/pero_setting_data/linear4.txt", "r")
                 linear4 = f.read()
                 linear4 = linear4.split(":")[1]
-                if linear4 == "스포트라이(Default)":
+                if linear4 == "스포트라이트(Default)":
                     func_mapping["spotlight"]()
                 elif linear4 == "화면 오른쪽 이동":
                     func_mapping["desktop_right"]()
