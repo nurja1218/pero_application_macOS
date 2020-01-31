@@ -46,10 +46,10 @@ a.datas += [('./setting/img/palmcat_title.png', './setting/img/palmcat_title.png
 ('./mainFrame/active_excel.png', './mainFrame/active_excel.png', 'DATA'),
 ('./mainFrame/active_macOS.png', './mainFrame/active_macOS.png', 'DATA'),
 ('./mainFrame/active_windows.png', './mainFrame/active_windows.png', 'DATA'),
-('./setting/pero_setting_data/current_app.txt', './setting/pero_setting_data/current_app.txt', 'DATA'),
-('./setting/pero_setting_data/option_macos.txt', './setting/pero_setting_data/option_macos.txt', 'DATA'),
-('./setting/pero_setting_data/apply_app.txt', './setting/pero_setting_data/apply_app.txt', 'DATA'),
-('./setting/pero_setting_data/apply_gesture.txt', './setting/pero_setting_data/apply_gesture.txt', 'DATA')]
+('./setting/pero_setting_data/current_app.txt', './setting/pero_setting_data/current_app.txt', 'txt'),
+('./setting/pero_setting_data/option_macos.txt', './setting/pero_setting_data/option_macos.txt', 'txt'),
+('./setting/pero_setting_data/apply_app.txt', './setting/pero_setting_data/apply_app.txt', 'txt'),
+('./setting/pero_setting_data/apply_gesture.txt', './setting/pero_setting_data/apply_gesture.txt', 'txt')]
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 exe = EXE(pyz,

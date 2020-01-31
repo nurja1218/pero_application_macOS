@@ -42,7 +42,7 @@
  [],
  False,
  False,
- 1580435811,
+ 1580457487,
  [('runw',
    '/Users/kimjungmo/opt/anaconda3/envs/pero/lib/python3.7/site-packages/PyInstaller/bootloader/Darwin-64bit/runw',
    'EXECUTABLE')])

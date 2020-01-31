@@ -30,15 +30,15 @@ class Ui_Form(QtWidgets.QWidget):
 
         self.setObjectName("Form")
         self.setEnabled(True)
-        self.resize(1330, 810)
-        self.setFixedSize(1330, 810)
+        self.resize(1280, 768)
+        self.setFixedSize(1280, 768)
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         self.setWindowOpacity(3.0)
         self.setStyleSheet("background-color: rgb(255, 255, 255)")
 
         self.gridLayoutWidget = QtWidgets.QWidget(self)
-        self.gridLayoutWidget.setGeometry(QtCore.QRect(10, 10, 1311, 791))
+        self.gridLayoutWidget.setGeometry(QtCore.QRect(10, 10, 1255, 748))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
         self.gridLayout = QtWidgets.QGridLayout(self.gridLayoutWidget)
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -286,10 +286,10 @@ class Ui_Form(QtWidgets.QWidget):
         font.setBold(True)
         font.setWeight(75)
         self.applications.setFont(font)
-        self.applications.setAlignment(QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
+        self.applications.setAlignment(QtCore.Qt.AlignLeft | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.applications.setObjectName("applications")
         self.gridLayout_14.addWidget(self.applications, 0, 0, 1, 1)
-        self.gridLayout.addLayout(self.gridLayout_14, 2, 0, 1, 2)
+        self.gridLayout.addLayout(self.gridLayout_14, 2, 0, 1, 3)
         self.gridLayout_336 = QtWidgets.QGridLayout()
         self.gridLayout_336.setSizeConstraint(QtWidgets.QLayout.SetFixedSize)
         self.gridLayout_336.setObjectName("gridLayout_336")
@@ -604,7 +604,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.video = QtWidgets.QLabel(self.gridGroupBox_78)
         self.video.setStyleSheet("background-color: rgb(255, 255, 255)")
         self.video.setObjectName("video")
-        self.video.setFixedSize(546, 260)
+        self.video.setFixedSize(526, 260)
         self.gridLayout_175.addWidget(self.video, 0, 0, 1, 1)
         self.gridLayout_173.addLayout(self.gridLayout_175, 0, 0, 1, 1)
         self.gridLayout_95.addWidget(self.gridGroupBox_78, 2, 12, 16, 14)
@@ -1228,21 +1228,21 @@ class Ui_Form(QtWidgets.QWidget):
 
     def retranslateUi(self, Form):
 
-        # def resource_path(relative):
-        #     if hasattr(sys, "_MEIPASS"):
-        #         return os.path.join(sys._MEIPASS, relative)
-        #     return os.path.join(relative)
+        def resource_path(relative):
+            if hasattr(sys, "_MEIPASS"):
+                return os.path.join(sys._MEIPASS, relative)
+            return os.path.join(os.path.abspath("."), relative)
 
         # subprocess_list.append(subprocess.Popen('python keyConverterPERO.py', shell=True))
 
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("Palmcat", "Palmcat"))
-        self.setWindowIcon(QIcon('./setting/img/palmcat_title.png'))
+        self.setWindowIcon(QIcon(resource_path('./setting/img/palmcat_title.png')))
 
-        self.reset_btn.setIcon(QtGui.QIcon("./setting/img/reset_icon.png"))
+        self.reset_btn.setIcon(QtGui.QIcon(resource_path("./setting/img/reset_icon.png")))
         self.reset_btn.setIconSize(QtCore.QSize(16, 16))
 
-        pixmap_ges_func = QPixmap("./mainFrame/gesture_function.png")
+        pixmap_ges_func = QPixmap(resource_path("./mainFrame/gesture_function.png"))
         pixmap_ges_func = pixmap_ges_func.scaled(200, 19)
         self.gesture_function_set.setText(_translate("Form", "제스처,기능별설정"))
         self.gesture_function_set.setPixmap(QPixmap(pixmap_ges_func))
@@ -1251,22 +1251,22 @@ class Ui_Form(QtWidgets.QWidget):
         self.PERO.setText(_translate("Form", "PERO"))
         self.applications.setText(_translate("Form", "Applications"))
 
-        palm_logo = QPixmap("./mainFrame/palmcat_logo.png")
+        palm_logo = QPixmap(resource_path("./mainFrame/palmcat_logo.png"))
         palm_logo = palm_logo.scaled(144, 43)
         self.palmcat_logo.setText(_translate("Form", "팜켓"))
         self.palmcat_logo.setPixmap(QPixmap(palm_logo))
 
-        touch_4 = QPixmap("./setting/move_video/touch_4.png")
+        touch_4 = QPixmap(resource_path("./setting/move_video/touch_4.png"))
         self.touch4.setText(_translate("Form", "터치4개"))
         self.touch4.setPixmap(QPixmap(touch_4))
 
         self.commands.setText(_translate("Form", "Commands"))
 
-        touch_3 = QPixmap("./setting/move_video/touch_3.png")
+        touch_3 = QPixmap(resource_path("./setting/move_video/touch_3.png"))
         self.touch3.setText(_translate("Form", "터치3개"))
         self.touch3.setPixmap(QPixmap(touch_3))
 
-        touch_2 = QPixmap("./setting/move_video/touch_2.png")
+        touch_2 = QPixmap(resource_path("./setting/move_video/touch_2.png"))
         self.touch2.setText(_translate("Form", "터치2개"))
         self.touch2.setPixmap(QPixmap(touch_2))
 
@@ -1299,56 +1299,56 @@ class Ui_Form(QtWidgets.QWidget):
         movie.start()
         self.finger_touch_des.setText(_translate("Form", "Description & Finger touch"))
 
-        linear_img1 = QPixmap("./mainFrame/linear1.png")
+        linear_img1 = QPixmap(resource_path("./mainFrame/linear1.png"))
         linear_img1 = linear_img1.scaled(45, 45)
         self.linear1.setText(_translate("Form", "linear1"))
         self.linear1.setAlignment(Qt.AlignCenter)
         self.linear1.setPixmap(QPixmap(linear_img1))
         self.linear1.mousePressEvent = self.select_linear1
 
-        linear_img2 = QPixmap("./mainFrame/linear2.png")
+        linear_img2 = QPixmap(resource_path("./mainFrame/linear2.png"))
         linear_img2 = linear_img2.scaled(45, 45)
         self.linear2.setText(_translate("Form", "linear2"))
         self.linear2.setAlignment(Qt.AlignCenter)
         self.linear2.setPixmap(QPixmap(linear_img2))
         self.linear2.mousePressEvent = self.select_linear2
 
-        linear_img3 = QPixmap("./mainFrame/linear3.png")
+        linear_img3 = QPixmap(resource_path("./mainFrame/linear3.png"))
         linear_img3 = linear_img3.scaled(45, 45)
         self.linear3.setText(_translate("Form", "linear3"))
         self.linear3.setAlignment(Qt.AlignCenter)
         self.linear3.setPixmap(QPixmap(linear_img3))
         self.linear3.mousePressEvent = self.select_linear3
 
-        linear_img4 = QPixmap("./mainFrame/linear4.png")
+        linear_img4 = QPixmap(resource_path("./mainFrame/linear4.png"))
         linear_img4 = linear_img4.scaled(45, 45)
         self.linear4.setText(_translate("Form", "linear4"))
         self.linear4.setAlignment(Qt.AlignCenter)
         self.linear4.setPixmap(QPixmap(linear_img4))
         self.linear4.mousePressEvent = self.select_linear4
 
-        linear_img5 = QPixmap("./mainFrame/linear5.png")
+        linear_img5 = QPixmap(resource_path("./mainFrame/linear5.png"))
         linear_img5 = linear_img5.scaled(45, 45)
         self.linear5.setText(_translate("Form", "linear5"))
         self.linear5.setAlignment(Qt.AlignCenter)
         self.linear5.setPixmap(QPixmap(linear_img5))
         self.linear5.mousePressEvent = self.select_linear5
 
-        linear_img6 = QPixmap("./mainFrame/linear6.png")
+        linear_img6 = QPixmap(resource_path("./mainFrame/linear6.png"))
         linear_img6 = linear_img6.scaled(45, 45)
         self.linear6.setText(_translate("Form", "linear6"))
         self.linear6.setAlignment(Qt.AlignCenter)
         self.linear6.setPixmap(QPixmap(linear_img6))
         self.linear6.mousePressEvent = self.select_linear6
 
-        linear_img7 = QPixmap("./mainFrame/linear7.png")
+        linear_img7 = QPixmap(resource_path("./mainFrame/linear7.png"))
         linear_img7 = linear_img7.scaled(45, 45)
         self.linear7.setText(_translate("Form", "linear7"))
         self.linear7.setAlignment(Qt.AlignCenter)
         self.linear7.setPixmap(QPixmap(linear_img7))
         self.linear7.mousePressEvent = self.select_linear7
 
-        linear_img8 = QPixmap("./mainFrame/linear8.png")
+        linear_img8 = QPixmap(resource_path("./mainFrame/linear8.png"))
         linear_img8 = linear_img8.scaled(45, 45)
         self.linear8.setText(_translate("Form", "linear8"))
         self.linear8.setAlignment(Qt.AlignCenter)
@@ -1357,28 +1357,28 @@ class Ui_Form(QtWidgets.QWidget):
 
         self.curve_action.setText(_translate("Form", "곡선운동"))
 
-        curve_img1 = QPixmap("./mainFrame/curve1.png")
+        curve_img1 = QPixmap(resource_path("./mainFrame/curve1.png"))
         curve_img1 = curve_img1.scaled(45, 45)
         self.curve1.setText(_translate("Form", "curve1"))
         self.curve1.setAlignment(Qt.AlignCenter)
         self.curve1.setPixmap(QPixmap(curve_img1))
         self.curve1.mousePressEvent = self.select_curve1
 
-        curve_img2 = QPixmap("./mainFrame/curve2.png")
+        curve_img2 = QPixmap(resource_path("./mainFrame/curve2.png"))
         curve_img2 = curve_img2.scaled(45, 45)
         self.curve2.setText(_translate("Form", "curve2"))
         self.curve2.setAlignment(Qt.AlignCenter)
         self.curve2.setPixmap(QPixmap(curve_img2))
         self.curve2.mousePressEvent = self.select_curve2
 
-        curve_img3 = QPixmap("./mainFrame/curve3.png")
+        curve_img3 = QPixmap(resource_path("./mainFrame/curve3.png"))
         curve_img3 = curve_img3.scaled(45, 45)
         self.curve3.setText(_translate("Form", "curve3"))
         self.curve3.setAlignment(Qt.AlignCenter)
         self.curve3.setPixmap(QPixmap(curve_img3))
         self.curve3.mousePressEvent = self.select_curve3
 
-        curve_img4 = QPixmap("./mainFrame/curve4.png")
+        curve_img4 = QPixmap(resource_path("./mainFrame/curve4.png"))
         curve_img4 = curve_img4.scaled(45, 45)
         self.curve4.setText(_translate("Form", "curve4"))
         self.curve4.setAlignment(Qt.AlignCenter)
@@ -1401,28 +1401,28 @@ class Ui_Form(QtWidgets.QWidget):
 
         self.overlap_action.setText(_translate("Form", "중첩운동"))
 
-        overlap_img1 = QPixmap("./mainFrame/overlap1.png")
+        overlap_img1 = QPixmap(resource_path("./mainFrame/overlap1.png"))
         overlap_img1 = overlap_img1.scaled(45, 45)
         self.overlap1.setText(_translate("Form", "overlap1"))
         self.overlap1.setAlignment(Qt.AlignCenter)
         self.overlap1.setPixmap(QPixmap(overlap_img1))
         self.overlap1.mousePressEvent = self.select_overlap1
 
-        overlap_img2 = QPixmap("./mainFrame/overlap2.png")
+        overlap_img2 = QPixmap(resource_path("./mainFrame/overlap2.png"))
         overlap_img2 = overlap_img2.scaled(45, 45)
         self.overlap2.setText(_translate("Form", "overlap2"))
         self.overlap2.setAlignment(Qt.AlignCenter)
         self.overlap2.setPixmap(QPixmap(overlap_img2))
         self.overlap2.mousePressEvent = self.select_overlap2
 
-        overlap_img3 = QPixmap("./mainFrame/overlap3.png")
+        overlap_img3 = QPixmap(resource_path("./mainFrame/overlap3.png"))
         overlap_img3 = overlap_img3.scaled(45, 45)
         self.overlap3.setText(_translate("Form", "overlap3"))
         self.overlap3.setAlignment(Qt.AlignCenter)
         self.overlap3.setPixmap(QPixmap(overlap_img3))
         self.overlap3.mousePressEvent = self.select_overlap3
 
-        overlap_img4 = QPixmap("./mainFrame/overlap4.png")
+        overlap_img4 = QPixmap(resource_path("./mainFrame/overlap4.png"))
         overlap_img4 = overlap_img4.scaled(45, 45)
         self.overlap4.setText(_translate("Form", "overlap4"))
         self.overlap4.setAlignment(Qt.AlignCenter)
@@ -1444,7 +1444,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.movement.setText(_translate("Form", "Movement"))
         self.user_set.setText(_translate("Form", "사용자 설정"))
 
-        windows_img = QPixmap("./mainFrame/windows.png")
+        windows_img = QPixmap(resource_path("./mainFrame/windows.png"))
         windows_tag = windows_img.scaled(167, 37)
         self.windows.setText(_translate("Form", "windows"))
         self.windows.setPixmap(QPixmap(windows_tag))
@@ -1452,14 +1452,14 @@ class Ui_Form(QtWidgets.QWidget):
         self.windows_current = "click_no"
         self.windows.setDisabled(True)
 
-        mac_img = QPixmap("./mainFrame/macOS.png")
+        mac_img = QPixmap(resource_path("./mainFrame/macOS.png"))
         mac_tag = mac_img.scaled(161, 37)
         self.mac_os.setText(_translate("Form", "masOS"))
         self.mac_os.setPixmap(QPixmap(mac_tag))
         self.mac_os.mousePressEvent = self.select_mac_os
         self.mac_os_current = "click_no"
 
-        excel_img = QPixmap("./mainFrame/excel.png")
+        excel_img = QPixmap(resource_path("./mainFrame/excel.png"))
         excel_tag = excel_img.scaled(85, 37)
         self.excel.setText(_translate("Form", "excel"))
         self.excel.setPixmap(QPixmap(excel_tag))
@@ -1467,7 +1467,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.excel_current = "click_no"
         self.excel.setDisabled(True)
 
-        ppt_img = QPixmap("./mainFrame/ppt.png")
+        ppt_img = QPixmap(resource_path("./mainFrame/ppt.png"))
         ppt_tag = ppt_img.scaled(141, 37)
         self.ppt.setText(_translate("Form", "ppt"))
         self.ppt.setPixmap(QPixmap(ppt_tag))
@@ -1475,13 +1475,13 @@ class Ui_Form(QtWidgets.QWidget):
         self.ppt_current = "click_no"
         self.ppt.setDisabled(True)
 
-        self.active_ppt = QPixmap("./mainFrame/active_ppt.png")
+        self.active_ppt = QPixmap(resource_path("./mainFrame/active_ppt.png"))
         self.active_ppt = self.active_ppt.scaled(127, 24)
-        self.active_excel = QPixmap("./mainFrame/active_excel.png")
+        self.active_excel = QPixmap(resource_path("./mainFrame/active_excel.png"))
         self.active_excel = self.active_excel.scaled(75, 23)
-        self.active_mac_os = QPixmap("./mainFrame/active_macOS.png")
+        self.active_mac_os = QPixmap(resource_path("./mainFrame/active_macOS.png"))
         self.active_mac_os = self.active_mac_os.scaled(140, 22)
-        self.active_windows = QPixmap("./mainFrame/active_windows.png")
+        self.active_windows = QPixmap(resource_path("./mainFrame/active_windows.png"))
         self.active_windows = self.active_windows.scaled(174, 26)
 
         self.active_app.setText(_translate("Form", "◀◀ Please select Application"))
