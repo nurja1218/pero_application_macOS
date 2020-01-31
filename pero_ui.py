@@ -8,20 +8,15 @@ from PyQt5.QtCore import Qt, pyqtSignal, QObject
 from PyQt5.QtGui import QPixmap, QIcon, QMovie
 
 
-# background process kill(keyConverter and pero_ui)
-def kill_process():
-    for proc in psutil.process_iter():
-        if any(procstr in proc.name() for procstr in
-               ['python', 'python.exe', 'python3.7']):
-            print(f'Killing {proc.name()}')
-            proc.kill()
+# def kill_process():
+#     for proc in psutil.process_iter():
+#         if any(procstr in proc.name() for procstr in
+#                ['python']):
+#             print(f'Killing {proc.name()}')
+#             proc.kill()
 
 
 subprocess_list = []
-
-
-class Communicate(QObject):
-    closeApp = pyqtSignal()
 
 
 class Ui_Form(QtWidgets.QWidget):
@@ -333,8 +328,6 @@ class Ui_Form(QtWidgets.QWidget):
         self.gridLayout_331.addWidget(self.reset_btn, 1, 1, 1, 1)
         # self.gridLayout_174.addLayout(self.gridLayout_179, 2, 2, 1, 1)
 
-        self.reset_btn.setIcon(QtGui.QIcon("./setting/img/reset_icon.png"))
-        self.reset_btn.setIconSize(QtCore.QSize(16, 16))
         self.reset_btn.setText(" Reset!")
         self.reset_btn.pressed.connect(self.press_reset_btn)
         self.reset_btn.released.connect(self.release_reset_btn)
@@ -1230,15 +1223,24 @@ class Ui_Form(QtWidgets.QWidget):
         # self.c.closeApp.connect(Form.close)
         # QtCore.QMetaObject.connectSlotsByName(Form)
 
+
     #####################################################################################################
 
     def retranslateUi(self, Form):
+
+        # def resource_path(relative):
+        #     if hasattr(sys, "_MEIPASS"):
+        #         return os.path.join(sys._MEIPASS, relative)
+        #     return os.path.join(relative)
 
         # subprocess_list.append(subprocess.Popen('python keyConverterPERO.py', shell=True))
 
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("Palmcat", "Palmcat"))
         self.setWindowIcon(QIcon('./setting/img/palmcat_title.png'))
+
+        self.reset_btn.setIcon(QtGui.QIcon("./setting/img/reset_icon.png"))
+        self.reset_btn.setIconSize(QtCore.QSize(16, 16))
 
         pixmap_ges_func = QPixmap("./mainFrame/gesture_function.png")
         pixmap_ges_func = pixmap_ges_func.scaled(200, 19)
@@ -2307,6 +2309,7 @@ class Ui_Form(QtWidgets.QWidget):
         self.mac_os_current = "click_no"
         self.mac_os.setStyleSheet("background-color: white; border: 0px")
 
+
         for i in range(0, 16):
             list(self.gesture_dic.items())[i][0].setStyleSheet("background-color: white; border: 0px")
             self.gesture_dic[list(self.gesture_dic.items())[i][0]] = "click_no"
@@ -2338,7 +2341,7 @@ class Ui_Form(QtWidgets.QWidget):
             f.write("default")
             f.close()
 
-            kill_process()
+            # kill_process()
 
             event.accept()
         else:

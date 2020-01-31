@@ -1,2 +1,2 @@
-linear3:대시보드 열기닫기(Default)/화면 왼쪽 이동/도움말 메뉴
-linear4:스포트라이트(Default)/화면 오른쪽 이동/전체화면 캡처
+linear3:대시보드 열기닫기(Default)/환경설정 열기/이모티콘
+linear4:스포트라이트(Default)/전체화면/화면 캡처

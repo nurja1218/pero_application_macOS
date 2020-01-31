@@ -4,10 +4,10 @@ import psutil
 from pynput import keyboard
 
 # The key combination to check
-COMBINATIONS = [{'comb1': [keyboard.Key.shift_l, keyboard.Key.enter]},
-                {'comb2': [keyboard.Key.shift_r, keyboard.Key.enter]},
-                {'comb3': [keyboard.Key.shift_l]},
-                {'comb4': [keyboard.Key.shift_r]}]
+COMBINATIONS = [{'comb1': [keyboard.Key.backspace, keyboard.Key.enter]},
+                {'comb2': [keyboard.Key.backspace, keyboard.Key.enter]},
+                {'comb3': [keyboard.Key.home]},
+                {'comb4': [keyboard.Key.end]}]
 
 # 현재 입력받은 키
 currentValue = []
@@ -122,24 +122,24 @@ def mac_dashboard():
     keyAction.release(keyboard.Key.alt)
 
 
-def desktop_left():
+def preferences():
     currentValue.clear()
 
-    keyAction.press(keyboard.Key.ctrl_l)
-    keyAction.press(keyboard.Key.left)
-    keyAction.release(keyboard.Key.left)
-    keyAction.release(keyboard.Key.ctrl_l)
-
-
-def help_menu():
-    currentValue.clear()
-
-    keyAction.press(keyboard.Key.shift)
     keyAction.press(keyboard.Key.cmd)
-    keyAction.press('/')
-    keyAction.release('/')
+    keyAction.press(",")
+    keyAction.release(",")
     keyAction.release(keyboard.Key.cmd)
-    keyAction.release(keyboard.Key.shift)
+
+
+def emoticon():
+    currentValue.clear()
+
+    keyAction.press(keyboard.Key.ctrl)
+    keyAction.press(keyboard.Key.cmd)
+    keyAction.press(keyboard.Key.space)
+    keyAction.release(keyboard.Key.space)
+    keyAction.release(keyboard.Key.cmd)
+    keyAction.release(keyboard.Key.ctrl)
 
 
 def spotlight():
@@ -151,17 +151,18 @@ def spotlight():
     keyAction.release(keyboard.Key.cmd)
 
 
-def desktop_right():
+def full_screen():
     currentValue.clear()
 
+    keyAction.press(keyboard.Key.ctrl)
+    keyAction.press(keyboard.Key.cmd)
+    keyAction.press("f")
+    keyAction.release("f")
+    keyAction.release(keyboard.Key.cmd)
+    keyAction.release(keyboard.Key.ctrl)
 
-    keyAction.press(keyboard.Key.ctrl_l)
-    keyAction.press(keyboard.Key.right)
-    keyAction.release(keyboard.Key.right)
-    keyAction.release(keyboard.Key.ctrl_l)
 
-
-def full_screen_capture():
+def screen_capture():
     currentValue.clear()
 
     keyAction.press(keyboard.Key.shift)
@@ -175,11 +176,11 @@ def full_screen_capture():
 #########################################
 
 func_mapping = {"mac_dashboard": mac_dashboard,
-                "desktop_left": desktop_left,
-                "help_menu": help_menu,
+                "preferences": preferences,
+                "emoticon": emoticon,
                 "spotlight": spotlight,
-                "desktop_right": desktop_right,
-                "full_screen_capture": full_screen_capture,
+                "full_screen": full_screen,
+                "screen_capture": screen_capture,
                 "presentation_start": presentation_start,
                 "presentation_create": presentation_create,
                 "slide_add": slide_add,
@@ -242,10 +243,10 @@ def execute3():
                 linear3 = linear3.split(":")[1]
                 if linear3 == "대시보드 열기닫기(Default)":
                     func_mapping["mac_dashboard"]()
-                elif linear3 == "화면 왼쪽 이동":
-                    func_mapping["desktop_left"]()
-                elif linear3 == "도움말 메뉴":
-                    func_mapping["help_menu"]()
+                elif linear3 == "환경설정 열기":
+                    func_mapping["preferences"]()
+                elif linear3 == "이모티콘":
+                    func_mapping["emoticon"]()
 
 
 def execute4():
@@ -275,10 +276,10 @@ def execute4():
                 linear4 = linear4.split(":")[1]
                 if linear4 == "스포트라이트(Default)":
                     func_mapping["spotlight"]()
-                elif linear4 == "화면 오른쪽 이동":
-                    func_mapping["desktop_right"]()
-                elif linear4 == "전체화면 캡처":
-                    func_mapping["full_screen_capture"]()
+                elif linear4 == "전체화면":
+                    func_mapping["full_screen"]()
+                elif linear4 == "화면 캡처":
+                    func_mapping["screen_capture"]()
 
 
 # 키보드 클릭시(press) 아래 함수 실행
@@ -328,6 +329,8 @@ def on_release(key):
         # currentList.clear()
         pass
 
+    # 만약에 복수의 키를 입력받고 단축키를 실행시키려면 clear문을 실행 함수에 넣어야함
+    # because, 아래처럼 clear시키면 currentValue가 한 개의 인자 밖에 가질수 없음
     try:
         currentValue.clear()
     except KeyError:
